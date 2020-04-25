@@ -1,0 +1,66 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <stdlib.h>
+using namespace std;
+
+int main(){
+    system("COLOR 1F");
+	int num,n,t=0, ex;
+	cout << "\t\t" << "BIENVENIDO AL JUEGO LARA-LARA " << "\t\t\n\n"  << endl;
+	cout << "\t" << "Presione --> 1 <-- Para Abrir el juego: " << endl;
+	cout << "\t" << "Presione --> 2 <-- Para cerrar el juego: " << endl;
+	cout << "\n\n\t" << "Tu seleccion es: "; cin >> ex;
+	if (ex< 1 || ex>2 ){
+        system("cls");
+        cout << " POR FAVOR INGRESE UN NUMERO VALIDO " << "\n\n";
+        return main();
+	}
+	if(ex == 1){
+	system("COLOR 3F");
+	system("cls");
+	srand(time(NULL));
+	num = 1 + rand() % 100;
+	cout << "Numero al azar: " << num << endl;
+	while(n!=num){
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    t++;
+   if(n==num){
+        cout << "Usted acerto el numero en: " << t << " Intentos. " << endl;
+    }
+	}
+	}
+
+        if(t>= 1 && t<=5){
+        cout << "Usted pertenece al rango Brian Lara" << endl;
+        system("pause");
+        }
+
+
+
+        if(t>= 6 && t<=15){
+            cout << "Usted pertenece al rango Klosterian" << endl;
+        system("pause");
+        }
+
+
+                  if(t>= 16 && t<=30){
+            cout << "Usted pertenece al rango Dirubezco" << endl;
+                 system("pause");
+                  }
+
+
+          if(t>= 30){
+            cout << "Usted pertenece al rango Simonirico" << endl;
+          system("pause");
+          }
+
+if(ex == 2){
+            system("cls");
+            system("COLOR 0F");
+           cout << "\t\n\t"  << "VUELVA PRONTO" << endl;
+            return 0;
+
+}
+}
