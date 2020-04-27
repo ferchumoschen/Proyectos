@@ -1,0 +1,82 @@
+#include <iostream>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
+int main(){
+    system("COLOR 0E");
+    cout << " BIENVENIDOS " << endl;
+    cout << " \t      AL PROGRAMA " << endl;
+    cout << " \t\t             DE " << endl;
+    cout << " \t\t\t             CCM FUMIGACIONES " << endl;
+system ("pause");
+system ("cls");
+    int ndire,opc,precio=240,m,pago,pr;
+    char nombre[100], calle[15];
+    string pat;
+    system("COLOR F0");
+    cout<<"                       INGRESE LOS SIGUIENTES DATOS" << endl;
+    cout <<"NOMBRE/S Y APELLIDO/S: ";
+    cin.getline(nombre,sizeof(nombre));
+    cout <<"\n";
+    cout<<"CALLE PRINCIPAL: ";
+    cin.getline(calle,sizeof(calle));
+    cout <<"\n";
+    cout<<"DIRECCION DE CASA: ";
+    cin >> ndire;
+    cout <<"\n";
+    cout<<"PATENTE: (LETRAS Y NUMEROS JUNTOS) ";
+    cin >> pat;
+    system ("pause");
+    system ("cls");
+    system("COLOR F0");
+
+    cout << "                     LOS DATOS INGRESADOS SON LOS SIGUIENTES" << endl;
+    cout << nombre << endl;
+    cout << calle << endl;
+    cout << ndire << endl;
+    cout << pat << endl;
+    cout << "                    DESEA CONFIRMAR LOS DATOS?" << endl;
+    cout << "CON 1 CONFIRMARA LOS DATOS." << endl;
+    cout << "CON 2 VOLVERA AL INICIO DEL PROGRAMA PARA CAMBIAR DATOS." << endl;
+    cin >> opc;
+    if(opc == 1){
+       cout << "                 CONFIRMADO" << endl;
+       system ("pause");
+       system ("cls");
+    }
+    if(opc == 2){
+        system ("cls");
+        return main();
+    }
+cout << "                      CUANTOS MESES DESEA ABONAR (MAXIMO 12)" << endl;
+cin >> m;
+ while(m >12){
+    cout << "INGRESE UN MES VALIDO" << endl;
+    cin >> m;
+}
+pr = precio * m;
+cout << "EL PRECIO FINAL SERIA: " << pr << endl;
+    system ("pause");
+       system ("cls");
+       system("COLOR F0");
+    cout << "                   INGRESE SU METODO DE PAGO" << endl;
+    cout << "INGRESE 1 PARA PAGAR EN EFECTIVO" << endl;
+    cout << "INGRESE 2 PARA PAGAR EN TARJETA DE CREDITO" << endl;
+    cin >> pago;
+if(pago == 1){
+    precio = (float)pr * 0.95;
+}
+if(pago == 2){
+   precio = (float)pr * 1.05;
+}
+cout << "                     EL PRECIO FINAL ES DE: $" << (float)precio << endl;
+        system ("pause");
+       system ("cls");
+       system("COLOR 0E");
+       cout << "              MUCHAS GRACIAS POR USAR EL PROGRAMA" << endl;
+
+return 0;
+}
+
+
